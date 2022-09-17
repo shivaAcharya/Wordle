@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             val simpleEditText = findViewById<View>(R.id.et_simple) as EditText
             val strValue = simpleEditText.text.toString().uppercase()
 
-            var checkGuessWord = checkGuess(ansWord, strValue)
+            val checkGuessWord = checkGuess(ansWord, strValue)
             simpleEditText.text.clear()
 
             guess++
@@ -102,6 +102,9 @@ class MainActivity : AppCompatActivity() {
 
                 finalAns.isVisible = true
                 finalAns.text = ansWord
+
+                guessButton.alpha = .5f
+                guessButton.isClickable = false
 
             }
 
